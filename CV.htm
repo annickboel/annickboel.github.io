@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <style>
+      body {
+         font-family: "Trebuchet MS", sans-serif;
+         font-size: 14pt;
+         margin:0;
+         padding:0;
+      }
+      .wrapper {
+         background-color: lightgrey;
+         display:flex;
+         flex-direction: row;
+         justify-content:space-around;
+      }
+      .main {
+         background-color: grey;
+         display:flex;
+         flex-direction: column;
+	 flex: 0.9;
+      }
+      .header {
+         background-color: grey;
+         display:flex;
+         flex-direction: column;
+      }
+     .content {
+         background-color: white;
+         display:flex;
+         flex-direction: column;
+      }
+      .contacts {
+         display:flex;
+         flex-direction: row;
+      }
+      .gamerprices1 {
+	
+      }
+      .gamerprices2 {
+	margin: 20px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class='wrapper'>
+      <div class='main'>
+         <div class='header'>
+	    <div class="name">
+              Martin Besselievre
+            </div>
+            <div class="job">
+              Développeur web
+            </div>
+	    <div class="contacts">
+              <div class="email">
+                 besselievre.martin@gmail.com
+	      </div>
+              <div class="phone">
+                 06.76.58.07.82
+              </div>
+            </div>
+         </div>
+         <div class='content'>
+            <iframe src="https://api.gamerprices.com/compare/dealsdugamer?locale=fr_fr&platform=xboxone,pc,ps4,nswitch&gameId=41816" 
+		height="200" width="50%" scrolling="auto" style="" class="gamerprices1 gamerprices2" frameborder="1">
+            </iframe>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
