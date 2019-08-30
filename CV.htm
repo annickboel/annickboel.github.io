@@ -1,44 +1,154 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
    <style>
       body {
-         font-family: "Trebuchet MS", sans-serif;
-         font-size: 14pt;
+         font-family: 'Roboto', sans-serif;
+         font-weight:300;
+         font-size: 11pt;
+         color: #222;
          margin:0;
          padding:0;
       }
+      ul {
+        font-size:0.8rem;
+        padding: 0 1em;
+        list-style: none;
+        margin:0;
+      }
+      li {
+	margin-top: -0.5em;
+      }
+li:before { 
+    content: "";
+    border-color: transparent #111;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.8em;
+    position: relative;
+}
+
+      .light {
+	font-weight:300;
+      }
+      .bold{
+	font-weight:500;
+      }
+      .uppercase{
+	text-transform: uppercase;
+      }
       .wrapper {
-         background-color: lightgrey;
          display:flex;
          flex-direction: row;
          justify-content:space-around;
       }
       .main {
-         background-color: grey;
          display:flex;
          flex-direction: column;
-	 flex: 0.9;
+	 flex: 1;
+	 padding-left:1rem;
+         padding-right:1rem;
       }
       .header {
-         background-color: grey;
          display:flex;
          flex-direction: column;
+         margin-top: 0.5rem;
+	 margin-bottom: 0.5rem;
       }
      .content {
-         background-color: white;
          display:flex;
-         flex-direction: column;
+         flex-direction: row;
+         justify-content: space-between;
+      }
+      .name {
+         font-size:2.2rem;
+      }
+      .job {
+         font-size:2rem;
+         line-height:1.9rem;
+         margin-bottom: 0.5rem;
+      }
+      .type {
+         font-size:1.8rem;
       }
       .contacts {
          display:flex;
          flex-direction: row;
+         justify-content:space-between
       }
-      .gamerprices1 {
-	
+      .email {
+         display:flex;
+         flex-direction: row;
+         font-size:1.2rem;
+ 	 flex:0.75;
       }
-      .gamerprices2 {
-	margin: 20px;
+      .phone {
+         display:flex;
+         flex-direction: row;
+         font-size:1.2rem;
+ 	 flex:0.25;
+         justify-content: flex-end;
+      }
+      .about{
+	margin-top:1rem;
+        font-size:0.9rem;
+      }
+      .left {
+         display:flex;
+         flex:0.80;
+         flex-direction:column;
+      }
+      .right {
+         display:flex;
+         flex:0.20;
+	 flex-direction:column;
+      }
+      .left .section {
+         display: flex;
+         font-size: 1.3rem;
+         text-transform:uppercase;
+	 margin-top:0.7rem;
+ 	 margin-bottom:0.7rem;
+      }
+     .right .section {
+         display: flex;
+         flex-direction:row;
+         font-size: 1.3rem;
+         text-transform:uppercase;
+	 margin-top:0.7rem;
+ 	 margin-bottom:0.7rem;
+      	 justify-content: flex-start
+      }
+      .title {
+         font-size:1.1rem;
+         font-weight:400;
+         color: #222;
+      }
+      .subtitle{
+         margin-left:0.5rem;
+         font-size: 0.8 rem;
+         margin-bottom:0.4rem;
+         color: #444;
+      }
+      .detail {
+         margin-left:0.5rem;
+         margin-top: 0.2rem;
+         font-size:0.8rem;
+         color: #222;
+         padding-right: 1rem;
+      }
+      .skills {
+        display: flex;
+        flex-direction:column;
+        font-size:1.2rem;
+        font-weight:300;
+	margin-top: 0.5rem;
+    	margin-bottom: 0.5rem;
       }
    </style>
 </head>
@@ -51,21 +161,131 @@
               Martin Besselievre
             </div>
             <div class="job">
-              Développeur web
+              Développeur web: <span class='type'>Contrat de professionnalisation</span>
             </div>
 	    <div class="contacts">
               <div class="email">
                  besselievre.martin@gmail.com
 	      </div>
               <div class="phone">
-                 06.76.58.07.82
+                    06.76.58.07.82
               </div>
+            </div>
+	    <div class="about">
+                 Etudiant ETNA en Bachelor, après deux années à SUPINFO Paris, je recherche une alternance de 2 ans ou plus pour la rentrée (11/2019). 
+                 Je possède les bases de l'architecture et du dévéloppement web et mobile et de l'administration système.
+                 J'ai la pratique de quelques frameworks CSS, PHP, JS, Python, Java et de quelques bases de données (SQL, NOSQL). 
+                 Je m'intéresse aux architectures micro-services, à la containerisation et aux technologies Cloud. 
+                 Je suis dynamique, motivé et rigoureux.
             </div>
          </div>
          <div class='content'>
-            <iframe src="https://api.gamerprices.com/compare/dealsdugamer?locale=fr_fr&platform=xboxone,pc,ps4,nswitch&gameId=41816" 
-		height="200" width="50%" scrolling="auto" style="" class="gamerprices1 gamerprices2" frameborder="1">
-            </iframe>
+	    <div class='left'>
+	       <div class='section'>
+	          Expérience professionnelle
+               </div>
+		<div class='title'>
+	          2019: DEWIZZ à Ronchin (59) - Stage 6 mois
+               </div>
+		<div class='detail'>
+                   Fonction: Développeur Wordpress.Technologies: LAMP, Wordpress, API REST.
+               </div>
+               <div class='detail'>
+                    L'ESN DEWIZZ est également éditeur du site https://gamerprices.fr, 'Le comparateur de jeux vidéos' et d'une solution SaaS d'Affiliation as a Service.<br>
+                    Objet du stage: Développement d'un plugin Wordpress, pour la mise à disposition de shortcodes capables de s'interfacer avec les api Search and Compare de Gamerprices, afin d'afficher des 'Box de prix'
+                          au sein des sites Wordpress des partenaires du site Gamerprices.<br/>
+               </div>
+
+               <!-- FORMATION -->
+               <div class='section'>
+	          Formation
+               </div>
+               <div class='title'>
+	          2018-2019: ETNA à Ivry-Sur Seine (94)
+               </div>
+               <div class='detail'>
+	          La pédagogie ETNA, orientée Projets, permet de devenir à la fois opérationnel et autonome.
+		  L'APAE est une année de préparation à l'alternance, qui permet d'acquérir les bases du
+		  développement web et mobile, et de l'administration des systèmes Unix.
+               </div>
+                <div class='title'>
+	          2015-2017: SUPINFO Paris
+               </div>
+               <div class='detail'>
+	          Associate of Sciences 2ème année : 2016-2017<br/>
+                  Associate of Sciences 1ère année : 2015-2016
+               </div>
+                <div class='title'>
+	          2014-2015: DORANCO Paris
+               </div>
+	       <div class='detail'>
+	          Formation Développeur d’applications multimedia
+               </div>
+  
+               <div class='title'>
+	          Juin 2014 : BACCALAUREAT PRO ELEEC
+               </div>
+
+               <div class='section'>
+	          Projets
+               </div>
+            </div>
+	    <div class='right'>
+               <div class='skills'>
+		  <div class='uppercase'>Développement Web</div>
+                  <ul>
+                     <li>Langages: HTML5, CSS3, C, PHP, Node, Python, Java</li>
+                     <li>Framework CSS: Bootstrap, Flexbox</li>
+                     <li>Framework JS: JQuery, Express, React, Angular</li>
+                     <li>Framework PHP: Laravel</li>
+                     <li>Framework Java: Jersey</li>
+                     <li>Framework Python: Flask</li>
+                     <li>CMS: Wordpress
+                     <li>BDD SQL: MySQL</li>
+                     <li>BDD NoSQL: MongoDB</li>
+                     <li>Web scraping: Scrapy</li>
+		     <li>Outils: SVN, Git, Maven              
+                  </ul>
+               </div>
+               <div class='skills'>
+		  <div class='uppercase'>Développement mobile</div>
+                  <ul>
+                     <li>SDK Android</li>
+                     <li>React Native</li>
+                  </ul>
+               </div>
+	       <div class='skills'>
+		  <div class='uppercase'>Administration système</div>
+                  <ul>
+                     <li>Linux (Debian, CentOS)</li>
+                     <li>Virtualisaton: VMWare, VirtualBox</li>
+                     <li>Containerisation: Docker</li>
+                  </ul>
+               </div>
+ 	       <div class='skills'>
+		  <div class='uppercase'>Langues</div>
+                  <ul>
+                     <li>Anglais: B1</li>
+                  </ul>
+               </div>
+ 	       <div class='skills'>
+		  <div class='uppercase'>Loisirs</div>
+                  <ul>
+                     <li>Sport en salle</li>
+                     <li>Musique</li>
+                  </ul>
+               </div>
+ 	       <div class='skills'>
+		  <div class='uppercase'>Autre</div>
+                  <ul>
+                     <li>Auto-entrepreneur</li>
+                  </ul>
+               </div>
+               
+             
+
+            <div>
+            
          </div>
       </div>
    </div>
