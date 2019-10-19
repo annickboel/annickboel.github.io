@@ -19,7 +19,7 @@ find_next_section_name() {
    sections=`man $1 | grep '^[A-Z]'`
 
    # Remove line fields before the searched field.
-   # Take next_field 
+   # Take next_field
    command="echo \$sections |  awk ' { sub(/^.* *$2/, \"\"); print \$1}'"
 
    # Execute the command
@@ -30,18 +30,17 @@ find_next_section_name() {
 
 find_next_flag_name() {
    echo "display_next_flag_name $1 $2"
-   
-   #Sections lines start with  
+
+   #Sections lines start with
    flags=`man $1 | grep  '$2'`
    echo $flags
 
 }
-
 display_man_section() {
    section=$2
 
    # Find the name of the next section in manual
-   find_next_section_name $1 $2 
+   find_next_section_name $1 $2
    next_section=$retval
 
    #
@@ -84,7 +83,7 @@ is_man_installed
 # The script has arguments
 COUNTER=0
 COMMAND=""
-while  [ $# -gt 0 ] 
+while  [ $# -gt 0 ]
    do
       ARG="$1"
       FLAG_NAME=""
@@ -124,6 +123,10 @@ if [ $COUNTER -eq 0 ]
       echo "What manual page do you want?"
       usage
 fi
+
+
+
+
 
 
 
